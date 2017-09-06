@@ -1,0 +1,41 @@
+div.register { 
+    width:562px;
+    margin-right:77px;
+    background:#0991a9;
+    margin-bottom:72px;   
+}
+
+div.register form {
+    border-top:1px #65a3b9 solid;
+    border-bottom:1px #0a757e solid;
+    padding:40px;  
+}
+
+div.register .form-group {
+    position:relative;   
+}
+
+div.register label { 
+    font-size:16px;
+    color:#fff;  
+}
+
+div.register input[type="text"],
+div.register input[type="email"],
+div.register input[type="password"] {
+    padding:12px 36px 12px 13px;
+    font-family: Museo-300, sans;
+    font-size:14px;
+    color:#a5acb4;   
+    width:65%;    
+    float:right;    
+    margin-bottom:10px;   
+    padding-left:36px;    
+    border:none;    
+    outline:none;
+}
+
+div.header h1, p {
+	color: #fff;
+	padding: 20px;
+}
