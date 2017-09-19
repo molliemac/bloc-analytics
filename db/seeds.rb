@@ -8,7 +8,7 @@
 
 include Faker
 
-10.times do
+5.times do
   User.create!(
   username: Faker::Name.name,
   email: Faker::Internet.email,
@@ -18,7 +18,7 @@ end
 
 users = User.all
 
-20.times do
+10.times do
     RegisteredApplication.create!(
     user: users.sample,
     name: Faker::Name.name,
@@ -28,6 +28,17 @@ end
 
 registered_applications = RegisteredApplication.all
 
+# sample event
+events_array = ['click', 'view', 'download', 'upload', 'register']
+
+40.times do
+  Event.create!(
+    registered_application: registered_applications.sample,
+    name: events_array.sample
+  )
+end
+
 puts "Seeds finished"
 puts "#{User.count} users created"
 puts "#{RegisteredApplication.count} apps created"
+puts "#{Event.count} events created"
