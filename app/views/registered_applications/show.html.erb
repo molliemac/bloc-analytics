@@ -1,11 +1,11 @@
 <%= link_to "Back to Main Page", registered_applications_path %>
 
 <h1><%= @app.name %></h1>
-<h2><%= @app.url %></h2>
+<h2>URL: <%= @app.url %></h2>
 <h3> Events </h3>
-  <% @events.each do |event, count| %>
-  <h4><%= "#{event}" + ": " + "#{@app.events.count}" %><%=  %></h4>
-<% end %>
+  <%= pie_chart @app.events.group(:name).count %>
+  <%= line_chart @app.events.group_by_week(:created_at, last: 4).count %>
+
    
 <div class="btn-container">
 <div class="col-md-3 index-btn">

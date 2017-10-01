@@ -17,12 +17,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-li, a {
-	color: white;
-}
 
 ul.nav {
 	background-color: #006295;
+	color: white;
+}
+
+ul.nav a {
+	color: white;
 }
 
 
