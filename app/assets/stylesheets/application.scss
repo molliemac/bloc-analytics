@@ -14,5 +14,15 @@
  *= require_self
  */
 
+@import "bootstrap-sprockets";
 @import "bootstrap";
-@import "registration.scss"
+
+li, a {
+	color: white;
+}
+
+ul.nav {
+	background-color: #006295;
+}
+
+
