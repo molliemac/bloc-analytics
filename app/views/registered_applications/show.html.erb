@@ -1,14 +1,24 @@
-<%= link_to "Back to Main Page", registered_applications_path %>
+<div class="container">
+	<div class="row">
+		<%= link_to "Back to Main Page", registered_applications_path %>
+			<h1>Application Name: <%= @app.name %></h1>
+			<h4>URL: <%= @app.url %></h4>
+	</div>
+	<div class="row">
+		<div class="col-6"
+		<h3> Events </h3>
+		  <%= pie_chart @app.events.group(:name).count %>
+		</div>
+		<div class="col-6">
+		  <%= line_chart @app.events.group_by_week(:created_at, last: 4).count %>
+		</div>
+	</div>
 
-<h1><%= @app.name %></h1>
-<h2>URL: <%= @app.url %></h2>
-<h3> Events </h3>
-  <%= pie_chart @app.events.group(:name).count %>
-  <%= line_chart @app.events.group_by_week(:created_at, last: 4).count %>
+		   
+		<div class="btn-container">
+		<div class="col-md-3 index-btn">
+		      <%= link_to "delete", registered_application_path(@app), method: :delete, data: { confirm: "Are you sure you want to delete this application" } %>
+		 </div>
+		</div>
 
-   
-<div class="btn-container">
-<div class="col-md-3 index-btn">
-      <%= link_to "delete", registered_application_path(@app), method: :delete, data: { confirm: "Are you sure you want to delete this application" } %>
- </div>
 </div>

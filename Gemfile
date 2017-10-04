@@ -9,8 +9,8 @@ source 'https://rubygems.org'
  end
  
  group :development do
-   #gem 'sqlite3'
-   #gem 'web-console', '~> 2.0'
+   gem 'sqlite3'
+   gem 'web-console', '~> 2.0'
    gem 'pg'
  end
  

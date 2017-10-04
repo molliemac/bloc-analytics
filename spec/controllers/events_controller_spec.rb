@@ -1,16 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe EventsController, type: :controller do
+RSpec.describe API::EventsController, type: :controller do
+	let(:my_app) { RegisteredApplication.create!(name: "My app", url: "www.myapp.com") }
+	let(:my_event) { Event.create!(name: "upload") }
 
-	# POST create. Make sure a new event gets created with a name when JS snippet is triggered
-	describe "POST create" do
-		it "increases the number of events by 1" do
-			expect{post :create, event: {name:}}.to change(Event, :count).by(1)
-		end
-
-		it "assigns event to registered application" do
-			post :create, {name:}
-			expect(assigns(:events)).to eq RegisteredApplication.url
-		end
-	end
+	describe "POST events" do
+		it "returns status of 200" do
+       		(expect(response.status).to eq(200))
+     	end
+ 	end
 end
