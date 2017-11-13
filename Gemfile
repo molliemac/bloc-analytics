@@ -11,6 +11,7 @@ source 'https://rubygems.org'
  group :development do
    gem 'sqlite3'
    gem 'web-console', '~> 2.0'
+   gem 'pg'
  end
  
  gem 'sass-rails', '>= 3.2'
@@ -23,6 +24,8 @@ source 'https://rubygems.org'
  gem 'autoprefixer-rails'
  gem 'figaro'
  gem 'devise'
+ gem 'chartkick'
+ gem 'groupdate'
 
  group :development, :test do
    gem 'byebug'

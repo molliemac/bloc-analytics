@@ -17,12 +17,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-li, a {
-	color: white;
+
+
+.navbar-text {
+	float: right;
 }
 
-ul.nav {
-	background-color: #006295;
+.btn-primary {
+	background-color: #00C7EA;
 }
 
 
