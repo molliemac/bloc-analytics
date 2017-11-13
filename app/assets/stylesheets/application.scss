@@ -18,13 +18,13 @@
 @import "bootstrap";
 
 
-ul.nav {
-	background-color: #006295;
-	color: white;
+
+.navbar-text {
+	float: right;
 }
 
-ul.nav a {
-	color: white;
+.btn-primary {
+	background-color: #00C7EA;
 }
 
 
